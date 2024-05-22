@@ -1,7 +1,16 @@
+//Default window.
+GridSize(16);
+
 //Set up grid size button behavior
 const size = document.querySelector("#size");
 size.addEventListener("click", (e) =>{
-    GridSize(16);//Placeholder value. Future version will prompt for grid size.
+    let size = prompt("Enter a grid size between 1 and 100:", "16");
+    if(size < 16 || size > 100) {
+        GridSize(16);
+        alert("Size not allowed, defaulted to minimum.")
+    } else{
+        GridSize(size);
+    }
 });
 
 //Set up shake button behavior
@@ -29,7 +38,7 @@ function GridSize(gridSize){
     //Add Event Listeners to the pixels.
     const newPixels = document.querySelectorAll(".pixels");
     newPixels.forEach((newPixel) => {
-        newPixel.addEventListener("click",(e) => {
+        newPixel.addEventListener("mouseover",(e) => {
             newPixel.setAttribute("style","background-color:black")
         });
     });

@@ -1,3 +1,9 @@
+#header{
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+}
+
 #buttons{
     display: flex;
     justify-content: space-between;
