@@ -36,8 +36,8 @@ function GridSize(size){
         div.classList.toggle("pixels");
         div.id = i;
         div.textContent = "1";
-        div.style.minWidth = edge.toString + "%";
-        div.style.minHeight = edge.toString + "%";
+        div.style.minWidth = edge.toString() + "%";
+        div.style.minHeight = edge.toString() + "%";
         container.appendChild(div);
     }
 
