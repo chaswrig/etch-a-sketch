@@ -55,6 +55,7 @@ function GridSize(size){
 function ResetPixels(){
     const pixels = document.querySelectorAll(".pixels");
     pixels.forEach((pixel) => {
-        pixel.setAttribute("style","background-color:white")
+        pixel.style.backgroundColor = "white";
+        pixel.style.color = "white";
     });
 }
