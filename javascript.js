@@ -21,6 +21,8 @@ shake.addEventListener("click", (e) => {
 
 //Changes the size of the grid
 function GridSize(size){
+    let edge = 100/size;
+
     //Delete existing grid
     const pixels = document.querySelectorAll(".pixels");
     pixels.forEach((pixel)=>{
@@ -29,11 +31,13 @@ function GridSize(size){
 
     //Create new grid
     const container = document.querySelector("#container");
-    for(let i = 1; i <= size; i++){
+    for(let i = 1; i <= size**2; i++){
         const div = document.createElement("div");
         div.classList.toggle("pixels");
         div.id = i;
-        div.textContent = div.id;
+        div.textContent = "1";
+        div.style.minWidth = edge.toString + "%";
+        div.style.minHeight = edge.toString + "%";
         container.appendChild(div);
     }
 
@@ -41,7 +45,8 @@ function GridSize(size){
     const newPixels = document.querySelectorAll(".pixels");
     newPixels.forEach((newPixel) => {
         newPixel.addEventListener("mouseover",(e) => {
-            newPixel.setAttribute("style","background-color:black")
+            newPixel.style.backgroundColor = "black";
+            newPixel.style.color="black";
         });
     });
 }
@@ -53,7 +58,3 @@ function ResetPixels(){
         pixel.setAttribute("style","background-color:white")
     });
 }
-
-
-
-
