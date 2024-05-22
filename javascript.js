@@ -4,7 +4,7 @@ GridSize(16);
 //Set up grid size button behavior
 const size = document.querySelector("#size");
 size.addEventListener("click", (e) =>{
-    let size = prompt("Enter a grid size between 1 and 100:", "16");
+    let size = prompt("Enter a grid size between 16 and 100:", "16");
     if(size < 16 || size > 100) {
         GridSize(16);
         alert("Size not allowed, defaulted to minimum.")
@@ -20,7 +20,7 @@ shake.addEventListener("click", (e) => {
 });
 
 //Changes the size of the grid
-function GridSize(gridSize){
+function GridSize(size){
     //Delete existing grid
     const pixels = document.querySelectorAll(".pixels");
     pixels.forEach((pixel)=>{
@@ -28,10 +28,12 @@ function GridSize(gridSize){
     })
 
     //Create new grid
-    for(let i = 1; i <= gridSize; i++){
+    const container = document.querySelector("#container");
+    for(let i = 1; i <= size; i++){
         const div = document.createElement("div");
         div.classList.toggle("pixels");
         div.id = i;
+        div.textContent = div.id;
         container.appendChild(div);
     }
 

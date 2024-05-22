@@ -12,7 +12,6 @@
 #container {
     display: flex;
     background-color: red;
-    border: 20px solid red;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -21,10 +20,9 @@
 .pixels {
     display: flex;
     background-color: white;
-    border: 1px solid black;
     justify-content: center;
     align-items: center;
     flex-basis: 1;
-    width: 20vw;
-    height: 20vw;
+    min-width: 20px;
+    min-height: 20px;
 }
