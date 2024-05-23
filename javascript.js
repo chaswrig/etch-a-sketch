@@ -4,7 +4,7 @@ GridSize(50);
 //Set up grid size button behavior
 const size = document.querySelector("#size");
 size.addEventListener("click", (e) =>{
-    let size = prompt("Enter a grid size between 16 and 100:", "16");
+    let size = prompt("Enter a grid size between 16 and 100:", "50");
     if(size < 16 || size > 100) {
         GridSize(50);
         alert("Size not allowed, defaulted to 50.")
