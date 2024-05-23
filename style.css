@@ -1,3 +1,10 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #header{
     display: flex;
     justify-content: center;
@@ -7,6 +14,7 @@
 #buttons{
     display: flex;
     justify-content: space-between;
+    gap: 50px;
 }
 
 #container {
@@ -16,8 +24,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-content: flex-start;
-    height: 100vh;
-    width: 100vw;
+    height: 950px;
+    width: 950px;
 }
 
 .pixels {
@@ -30,8 +38,8 @@
     height: auto;
 }
 
-.child:before{
+/* .child:before{
     content: '';
     display: block;
     padding-top: 100%;
-}
+} */
